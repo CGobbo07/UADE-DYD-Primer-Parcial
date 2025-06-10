@@ -598,6 +598,31 @@ nav {
     color: darkblue;
 }
 
+/* Footer */
+.footer-uade {
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #1a1a1a;
+}
+
+.footer-logo {
+    width: 140px;
+    height: auto;
+    filter: brightness(0) invert(0);
+}
+
 /* Media querys*/
 
 @media (max-width: 768px) {

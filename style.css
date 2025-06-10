@@ -451,6 +451,27 @@ nav {
     transform: scale(1.05);
 }
 
+#form-feedback {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  border: 1px solid red;
+}
+
+.form-success {
+  background-color: rgba(0, 128, 0, 0.1);
+  color: green;
+  border: 1px solid green;
+}
+
+
 /* Subpagina de dydweb */
 
 .dydweb {

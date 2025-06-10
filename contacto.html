@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+        rel="stylesheet">
     <title>Contacto</title>
 </head>
 <header>
@@ -18,34 +20,40 @@
             <a href="materias.html">Materias 2025</a>
             <a href="contacto.html">Contacto</a>
         </div>
-    </nav>    
+    </nav>
 </header>
+
 <body>
     <section class="formulario1">
         <div class="formulario2">
             <h1 class="formulario3">Contactame</h1>
-            <form id="contactForm" method="POST">
+            <form id="contactForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                    <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                    <input type="text" id="asunto" class="form-control" name="asunto" placeholder="Asunto" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
+                    <textarea id="mensaje" class="form-control" name="mensaje" placeholder="Mensaje" rows="5"
+                        required></textarea>
                 </div>
                 <button type="submit" class="btn-form">Enviar</button>
+                <div id="form-feedback"></div>
             </form>
         </div>
+
     </section>
-        <footer class="footer-uade">
-    <div class="footer-container">
-        <img src="resources/logo uade.png" alt="UADE" class="footer-logo">
-        <p>&copy; Carlos Gobbo - Lic. en Tecnología de la Información</p>
-    </div>
-</footer>
+    <footer class="footer-uade">
+        <div class="footer-container">
+            <img src="resources/logo uade.png" alt="UADE" class="footer-logo">
+            <p>&copy; Carlos Gobbo - Lic. en Tecnología de la Información</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

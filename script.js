@@ -36,16 +36,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const icon = document.getElementById("icon-modo");
   const body = document.body;
 
+  const moonIcon = `<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>`;
+  const sunIcon = `
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2"/>
+    <path d="M12 20v2"/>
+    <path d="m4.93 4.93 1.41 1.41"/>
+    <path d="m17.66 17.66 1.41 1.41"/>
+    <path d="M2 12h2"/>
+    <path d="M20 12h2"/>
+    <path d="m6.34 17.66-1.41 1.41"/>
+    <path d="m19.07 4.93-1.41 1.41"/>
+  `;
+
   function actualizarIcono(isDark) {
-    icon.innerHTML = isDark
-      ? `<path d="M21.64 13a9 9 0 1 1-8.63-12 1 1 0 0 1 .75 1.84A7 7 0 1 0 19.8 12.9a1 1 0 0 1 1.84.75Z"/>` // Luna
-      : `<path d="M12 2a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1Zm0 17a5 5 0 0 1 0-10 5 5 0 0 1 0 10Zm6.36-4.64a1 1 0 0 0-1.41 1.41l1.42 1.42a1 1 0 0 0 1.41-1.41l-1.42-1.42ZM4.93 4.93a1 1 0 1 0-1.41 1.41L4.93 7.76a1 1 0 0 0 1.41-1.41L4.93 4.93ZM3 11a1 1 0 0 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 0 0 0 2h2a1 1 0 1 0 0-2h-2ZM6.34 17.66a1 1 0 0 0-1.41 1.41l1.42 1.42a1 1 0 0 0 1.41-1.41l-1.42-1.42Zm12.73-12.73a1 1 0 0 0-1.41 1.41l1.42 1.42a1 1 0 0 0 1.41-1.41L19.07 4.93ZM12 20a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1Z"/>`; // Sol
+    icon.innerHTML = isDark ? moonIcon : sunIcon;
   }
 
-  if (localStorage.getItem("darkMode") === "true") {
+  const isDark = localStorage.getItem("darkMode") === "true";
+  if (isDark) {
     body.classList.add("dark-mode");
-    actualizarIcono(true);
   }
+  actualizarIcono(isDark);
 
   if (toggle && icon) {
     toggle.addEventListener("click", () => {

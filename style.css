@@ -679,6 +679,7 @@ nav {
     filter: brightness(0) invert(0);
 }
 
+
 /* Media querys*/
 
 @media (max-width: 768px) {
